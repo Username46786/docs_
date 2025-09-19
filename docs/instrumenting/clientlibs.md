@@ -7,6 +7,14 @@ Before you can monitor your services, you need to add instrumentation to their
 code via one of the Prometheus client libraries. These implement the Prometheus
 [metric types](/docs/concepts/metric_types/).
 
+* [Go](https://github.com/prometheus/client_golang)
+
+  Install the Go client library with Go modules:
+
+  ```bash
+  go get github.com/prometheus/client_golang@latest
+
+
 Choose a Prometheus client library that matches the language in which your
 application is written. This lets you define and expose internal metrics via an
 HTTP endpoint on your application’s instance:
@@ -44,6 +52,7 @@ sends the current state of all tracked metrics to the server.
 If no client library is available for your language, or you want to avoid
 dependencies, you may also implement one of the supported [exposition
 formats](/docs/instrumenting/exposition_formats/) yourself to expose metrics.
+
 
 When implementing a new Prometheus client library, please follow the
 [guidelines on writing client libraries](/docs/instrumenting/writing_clientlibs).
